@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Online - Blue Water Pool Service</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="Index.html" class="logo">
+        <img src="Images /logo.png" alt="Blue Water Pool Service Logo"/>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="pool-maintenance.html">Swimming Pool & Maintenance</a></li>
+            <li><a href="hot-tubs.html">Hot Tubs & Swim Spas</a></li>
+            <li><a href="specialty-equipment.html">Specialty Equipment & Materials</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Recent Projects</a></li>
+        <li><a href="areas-we-service.html">Areas We Service</a></li>
+        <li class="dropdown">
+          <a href="contact.html">Contact Us</a>
+          <ul class="dropdown-menu">
+            <li><a href="book-online.html">Book Online</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-wrapper">
+    <h1>New Request</h1>
+    <p>Thank you for giving Blue Water Pool Service the opportunity to serve you. Please complete and submit the form below. We will contact you shortly.</p>
+
+    <form class="booking-form">
+      <fieldset>
+        <legend>Contact Details</legend>
+        <div class="form-group">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Company Name (if applicable)">
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email" required>
+          <small>By providing your email, you consent to receiving marketing emails. Unsubscribe anytime.</small>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number" required>
+          <small>By providing your phone number, you agree to receive SMS from Blue Water Pool Service. Reply STOP to unsubscribe.</small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Address</legend>
+        <div class="form-group">
+          <input type="text" placeholder="Street Address 1" required>
+          <input type="text" placeholder="Street Address 2">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="City" required>
+          <input type="text" placeholder="State" required>
+          <input type="text" placeholder="ZIP Code" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Service Details</legend>
+        <h4>Product Type</h4>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="In-Ground Pool"> In-Ground Pool</label>
+          <label><input type="checkbox" value="Above-Ground Pool"> Above-Ground Pool</label>
+          <label><input type="checkbox" value="Spa"> Spa</label>
+          <label><input type="checkbox" value="Filter"> Filter</label>
+          <label><input type="checkbox" value="Pump"> Pump</label>
+          <label><input type="checkbox" value="Salt System"> Salt System</label>
+          <label><input type="checkbox" value="Automation System"> Automation System</label>
+          <label><input type="checkbox" value="Liner"> Liner</label>
+          <label><input type="checkbox" value="Plaster/Tile"> Plaster/Tile</label>
+          <label><input type="checkbox" value="Heater"> Heater</label>
+        </div>
+
+        <h4>Service Type</h4>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="Opening"> Opening</label>
+          <label><input type="checkbox" value="Closing"> Closing</label>
+          <label><input type="checkbox" value="Leaking"> Leaking</label>
+          <label><input type="checkbox" value="No Power"> No Power</label>
+          <label><input type="checkbox" value="Poor Performance"> Poor Performance</label>
+          <label><input type="checkbox" value="Recurring Cleaning"> Recurring Cleaning</label>
+          <label><input type="checkbox" value="One-time Cleaning"> One-time Cleaning</label>
+          <label><input type="checkbox" value="Water Test"> Water Test</label>
+          <label><input type="checkbox" value="Water Troubleshooting"> Water Troubleshooting</label>
+          <label><input type="checkbox" value="Vacuum"> Vacuum</label>
+          <label><input type="checkbox" value="Hot Tub Cleaning"> Hot Tub Cleaning</label>
+          <label><input type="checkbox" value="Hot Tub Closing"> Hot Tub Closing</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>New Products (Optional)</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="In-Ground Pool"> In-Ground Pool</label>
+          <label><input type="checkbox" value="Above-Ground Pool"> Above-Ground Pool</label>
+          <label><input type="checkbox" value="Hot Tub"> Hot Tub</label>
+          <label><input type="checkbox" value="Pump"> Pump</label>
+          <label><input type="checkbox" value="Filter"> Filter</label>
+          <label><input type="checkbox" value="Salt System"> Salt System</label>
+          <label><input type="checkbox" value="Automation"> Automation</label>
+          <label><input type="checkbox" value="In-Ground Liner"> In-Ground Liner</label>
+          <label><input type="checkbox" value="Above-Ground Liner"> Above-Ground Liner</label>
+          <label><input type="checkbox" value="Heater"> Heater</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Internal Use Only</legend>
+        <div class="form-group">
+          <input type="text" placeholder="Zone (optional)">
+          <input type="text" placeholder="Week Code (optional)">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Description</legend>
+        <textarea placeholder="Provide an explanation of the needed service or desired project..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Desired Service Dates</legend>
+        <div class="form-group">
+          <label>Earliest Start Date <input type="date"></label>
+          <label>Latest Start Date (optional) <input type="date"></label>
+        </div>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Mornings (8:30a - 11a)</label>
+          <label><input type="checkbox"> Afternoons (12p - 6p)</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Upload Images (optional)</legend>
+        <input type="file" accept="image/*" multiple>
+        <small>Please include images to help us understand your request. No payment info, please.</small>
+      </fieldset>
+
+      <button type="submit" class="button">Submit Request</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blue Water Pool Service. All rights reserved.</p>
+  </footer>
+</body>
+</html>
