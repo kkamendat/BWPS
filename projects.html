@@ -6,14 +6,17 @@
   <title>Recent Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
     <nav class="navbar">
-        <a href="Index.html" class="logo">
-            <img src="Images /logo.png" alt="Blue Water Pool Service Logo"/>
-          </a>
+      <a href="index.html" class="logo">
+        <img src="Images /logo.png" alt="Blue Water Pool Service Logo" />
+      </a>
+
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+
         <li class="dropdown">
           <a href="services.html">Services <span class="arrow"></span></a>
           <ul class="dropdown-menu">
@@ -22,12 +25,19 @@
             <li><a href="specialty-equipment.html">Specialty Equipment & Materials</a></li>
           </ul>
         </li>
+
         <li><a href="about.html">About Us</a></li>
         <li><a href="projects.html">Recent Projects</a></li>
         <li><a href="areas-we-service.html">Areas We Service</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="https://clienthub.getjobber.com/client_hubs/f9afc6b9-3da8-4a99-a819-56aa45afb94f/public/work_request/new" class="button" target="_blank">Book Online</a></li>
-            </ul>
+        <li><a href="contact.html">Contact Us</a></li>
+
+        <li>
+          <a href="https://clienthub.getjobber.com/client_hubs/f9afc6b9-3da8-4a99-a819-56aa45afb94f/public/work_request/new"
+             class="button" target="_blank">
+            Book Online
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -36,15 +46,25 @@
       <h1>Recent Projects</h1>
       <p>Take a look at some of the successful pool and spa projects we've completed for our happy clients!</p>
 
-      <!-- Images section -->
-      <div class="project-images">
-        <img src="Images /picture3.JPG" alt="Project 1" class="project-image" />
-        <img src="Images /picture8.JPG" alt="Project 2" class="project-image" />
-        <img src="Images /picture7.JPG" alt="Project 3" class="project-image" />
-        <img src="Images /picture2.JPG" alt="Project 7" class="project-image" />
-        <img src="Images /picture1.JPG" alt="Project 8" class="project-image" />
-        <img src="Images /picture10.jpg" alt="Project 10" class="project-image" />
-        <img src="Images /picture11.jpg" alt="Project 11" class="project-image" />
+      <!-- FILTER BUTTONS -->
+      <div class="project-filters">
+        <button class="filter-btn active" onclick="showProjects('pools', this)">Pool Projects</button>
+        <button class="filter-btn" onclick="showProjects('hottubs', this)">Hot Tub Projects</button>
+      </div>
+
+      <!-- POOL PROJECTS -->
+      <div class="project-grid" id="pools">
+        <img src="Images /picture1.JPG" alt="Pool Project">
+        <img src="Images /picture10.JPG" alt="Pool Project">
+        <img src="Images /picture11.JPG" alt="Pool Project">
+      </div>
+
+      <!-- HOT TUB PROJECTS -->
+      <div class="project-grid hidden" id="hottubs">
+        <img src="Images /picture3.JPG" alt="Hot Tub Project">
+        <img src="Images /picture8.JPG" alt="Hot Tub Project">
+        <img src="Images /picture7.JPG" alt="Hot Tub Project">
+        <img src="Images /picture2.JPG" alt="Hot Tub Project">
       </div>
     </section>
   </main>
@@ -53,7 +73,23 @@
     <p>&copy; 2025 Blue Water Pool Service. All rights reserved.</p>
   </footer>
 
-  <!-- Add this script to fix the dropdown arrow rotation -->
+  <!-- PROJECT FILTER SCRIPT -->
+  <script>
+    function showProjects(type, button) {
+      document.getElementById('pools').classList.add('hidden');
+      document.getElementById('hottubs').classList.add('hidden');
+
+      document.getElementById(type).classList.remove('hidden');
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      button.classList.add('active');
+    }
+  </script>
+
+  <!-- DROPDOWN ARROW SCRIPT -->
   <script>
     document.querySelectorAll('.dropdown').forEach(dropdown => {
       const arrow = dropdown.querySelector('.arrow');
